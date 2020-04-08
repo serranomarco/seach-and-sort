@@ -1,7 +1,5 @@
 // Try to implement swap on your own, this time.
-function swap(arr, index1, index2) {
-
-}
+function swap(arr, index1, index2) {}
 
 function selectionSort(list) {
   // list  : array of items
@@ -29,5 +27,5 @@ function selectionSort(list) {
 
 module.exports = {
   selectionSort,
-  swap
+  swap,
 };

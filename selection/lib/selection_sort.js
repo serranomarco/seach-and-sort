@@ -1,7 +1,26 @@
 // Try to implement swap on your own, this time.
-function swap(arr, index1, index2) {}
+function swap(arr, index1, index2) {
+  const temp = arr[index1];
+  arr[index1] = arr[index2];
+  arr[index2] = temp;
+}
 
 function selectionSort(list) {
+  const length = list.length;
+
+  for (let i = 0; i < length; i++) {
+    let min = i;
+
+    for (let j = i + 1; j < length; j++) {
+      if (list[j] < list[min]) {
+        min = j;
+      }
+    }
+
+    if (min != i) {
+      swap(list, i, min);
+    }
+  }
   // list  : array of items
   // n     : size of list
   //

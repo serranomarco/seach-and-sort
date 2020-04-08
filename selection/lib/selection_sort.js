@@ -16,10 +16,7 @@ function selectionSort(list) {
         min = j;
       }
     }
-
-    if (min != i) {
-      swap(list, i, min);
-    }
+    swap(list, i, min);
   }
   // list  : array of items
   // n     : size of list

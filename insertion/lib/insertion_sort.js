@@ -1,4 +1,17 @@
 function insertionSort(list) {
+  let holePosition;
+  let valueToInsert;
+
+  for (let i = 1; i < list.length; i++) {
+    holePosition = i;
+    valueToInsert = list[i];
+
+    while (holePosition > 0 && list[holePosition - 1] > valueToInsert) {
+      list[holePosition] = list[holePosition - 1];
+      holePosition = holePosition - 1;
+    }
+    list[holePosition] = valueToInsert;
+  }
   // for i from 1 to length(list) inclusive do:
   //   /* select value to be inserted */
   //   valueToInsert = list[i]
